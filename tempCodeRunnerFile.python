@@ -1,0 +1,33 @@
+import math
+
+
+def func_g(x):
+    if x <= 0:
+        x = (3 * pow(x, 2)) / (1 + pow(x, 2))
+    else:
+        x = math.sqrt(1 + (2 * x / (1 + x**2)))
+
+    return x
+
+
+def func_z(x):
+    if x < 0:
+        x = 3 * x + math.sqrt(1 + x**2)
+    elif 0 <= x >= 1:
+        x = 2 * math.cos(x) * (math.e ** (-2 * x))
+    else:
+        x = 2 * math.sin(3 * x)
+
+    return x
+
+
+def main():
+    x = float(input("Enter X value"))
+    print(f"Result of func_g = {func_g(x)}")
+    print(f"Result of func_z = {func_z(x)}")
+    func_y = func_z(x) + func_g(x)
+    print(f"Result of func_y = {func_y}")
+
+
+if __name__ == "__main__":
+    main()

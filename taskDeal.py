@@ -67,6 +67,8 @@ def add_task(tasks_list, entry_name, entry_date, entry_time):
     entry_date.delete(0, tk.END)
     entry_time.delete(0, tk.END)
 
+def skip(): #добавил функцию 
+    pass
 
 def display_tasks(tasks_list):
     if not tasks_list:
@@ -125,4 +127,4 @@ if __name__ == "__main__":
     main()
 
 
-print("comm")
+
